@@ -1,0 +1,597 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+    color: #333333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #2E8B57; /* Teal for headings */
+}
+
+a {
+    color: #FF6F61; /* Deep Orange for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FF4500; /* Darker Orange on hover */
+}
+
+/* Header */
+header {
+    background-color: #2E8B57; /* Teal for header */
+    color: #FFFFFF;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    color: #FFD700; /* Gold for logo */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Gold on hover */
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.theme-toggle span {
+    font-size: 1rem;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle span:hover {
+    color: #FFD700; /* Gold on hover */
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #FFD700; /* Gold for hero heading */
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cta-button, .donate-button {
+    background-color: #FF6F61; /* Deep Orange for buttons */
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover, .donate-button:hover {
+    background-color: #FF4500; /* Darker Orange on hover */
+}
+
+/* About Section */
+#about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #FFFFFF;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2E8B57; /* Teal for headings */
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.1);
+}
+
+/* Mission/Vision Section */
+#mission-vision {
+    padding: 4rem 2rem;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+#mission-vision h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2E8B57; /* Teal for headings */
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #FF6F61; /* Deep Orange for icons */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2E8B57; /* Teal for headings */
+}
+
+.card p, .card ul {
+    font-size: 1rem;
+    color: #555555;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+/* Programs/Services Section */
+#programs {
+    padding: 4rem 2rem;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+#programs h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2E8B57; /* Teal for headings */
+}
+
+.programs-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.program-card {
+    background-color: #F5F5F5;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.program-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #FF6F61; /* Deep Orange for icons */
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2E8B57; /* Teal for headings */
+}
+
+.program-card p {
+    font-size: 1rem;
+    color: #555555;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 4rem 2rem;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2E8B57; /* Teal for headings */
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    color: #555555;
+    font-style: italic;
+}
+
+.testimonial-card h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #2E8B57; /* Teal for headings */
+}
+
+/* Footer */
+footer {
+    background-color: #2E8B57; /* Teal for footer */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Contact Section */
+#contact {
+    padding: 4rem 2rem;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2E8B57; /* Teal for headings */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333333;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555555;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #FF6F61; /* Deep Orange for button */
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #FF4500; /* Darker Orange on hover */
+}
+
+.contact-map {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1A1A1A;
+    color: #F5F5F5;
+}
+
+body.dark-mode header {
+    background-color: #333333;
+}
+
+body.dark-mode .card, body.dark-mode .program-card, body.dark-mode .testimonial-card {
+    background-color: #2E8B57;
+    color: #FFFFFF;
+}
+
+body.dark-mode .contact-form input, body.dark-mode .contact-form textarea {
+    background-color: #333333;
+    color: #FFFFFF;
+    border-color: #555555;
+}
+
+body.dark-mode .footer-bottom {
+    border-top: 1px solid #555555;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.theme-toggle span {
+    font-size: 1.2rem;
+}
+
+/* Donation Button */
+.donate-button {
+    background-color: #FF6F61; /* Deep Orange */
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: #FF4500; /* Darker Orange */
+}
+
+/* Statistics Section */
+#statistics {
+    padding: 4rem 2rem;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+#statistics h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2E8B57; /* Teal for headings */
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.stat-card {
+    background-color: #F5F5F5;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FF6F61; /* Deep Orange for numbers */
+}
+
+.stat-card p {
+    font-size: 1rem;
+    color: #555555;
+}
+/* Team Section */
+#team {
+    padding: 4rem 2rem;
+    background-color: #F5F5F5; /* Light background to make it stand out */
+    text-align: center;
+}
+
+#team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2E8B57; /* Teal for headings */
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #2E8B57; /* Teal for headings */
+}
+
+.team-card p {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #FF6F61; /* Deep Orange for icons */
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FF4500; /* Darker Orange on hover */
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    height: 50px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.logo span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FFD700; /* Gold for text */
+}
